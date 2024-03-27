@@ -50,7 +50,7 @@ pipeline {
             }
             post {
                 success {
-                    emailext attachLog: true, body: "Stage 5: Security Scan passed successfully.", subject: "Pipeline Notification: Stage 5 Passed", to: "email@example.com"
+                    emailext attachLog: true, body: "Stage 5: Security Scan passed successfully.", subject: "Pipeline Notification: Stage 5 Passed", to: "dhiraryaman@gmail.com"
                 }
                 failure {
                     emailext attachLog: true, body: "Stage 5: Security Scan failed. Please check the logs for details.", subject: "Pipeline Notification: Stage 5 Failed", to: "dhiraryaman@gmail.com"
@@ -63,7 +63,6 @@ pipeline {
                 echo 'Stage 6: Publish Artifacts'
                 echo 'Description: Publishing artifacts for deployment.'
                 echo 'Tool used: Jenkins Archive Artifacts'
-                // Add commands to publish artifacts, such as DLLs or executables
             }
         }
 
